@@ -141,7 +141,7 @@ jobs:
           submodules: true
       - name: Install packages
         run: |
-          # brew update sometimes fails with "Fetching /usr/local/Homebrew/Library/Taps/homebrew/homebrew-cask failed!"
+          # brew update sometimes fails with "Fetching /opt/homebrew/Library/Taps/homebrew/homebrew-cask failed!"
           brew update || brew update-reset
           brew install autoconf automake libtool
       - name: Set CC
