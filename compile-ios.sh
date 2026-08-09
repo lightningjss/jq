@@ -102,5 +102,5 @@ lipo -create -output ${cwd}/ios/dest/lib/libjq.a ${cwd}/ios/jq/{i386,x86_64,armv
 # Take the arm64 headers- the most common target.
 cp -r ${cwd}/ios/jq/arm64/include ${cwd}/ios/dest/
 rm -rf ${cwd}/build/ios/{i386,x86_64,armv7,armv7s,arm64}
-
+make LDFLAGS=-all-static
 echo "Output to ${cwd}/ios/dest"
